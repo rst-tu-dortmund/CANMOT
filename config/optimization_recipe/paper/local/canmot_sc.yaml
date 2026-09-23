@@ -1,0 +1,15 @@
+# @package _global_
+defaults:
+  - /experiment: paper/local/canmot/sc
+  - /bayes_opt: base_opt
+  - _self_
+optimization_recipe:
+  name: paper/local/canmot_sc
+  mode: class_aware
+  matrices: [q]
+  seed: 42
+  initial_random_points: 5
+  evaluations_per_parameter: 10
+  tracking_processes: 0
+  ledger: ${path_join:${environment_cfg.logging_base_path},optimization,local_canmot_sc.jsonl}
+  best_result: ${path_join:${environment_cfg.logging_base_path},optimization,local_canmot_sc_best.json}

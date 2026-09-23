@@ -1,0 +1,3 @@
+[submodule "dependencies_repos/nuscenes-devkit"]
+	path = dependencies_repos/nuscenes-devkit
+	url = https://github.com/rst-tu-dortmund/nuscenes-devkit.git

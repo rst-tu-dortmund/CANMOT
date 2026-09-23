@@ -1,0 +1,21 @@
+defaults:
+  - poly_mot: nusc_config
+  - environment_cfg: base_environment
+  - dataset_cfg: nuscenes
+  - detector_cfg: centerpoint
+  - model_cfg: base_model
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  - _self_
+
+eval_path: ${path_join:${environment_cfg.logging_base_path},adhoc,${dataset_cfg.name},${detector_cfg.model_name},${dataset_cfg.split},eval}
+result_path: ${path_join:${environment_cfg.logging_base_path},adhoc,${dataset_cfg.name},${detector_cfg.model_name},${dataset_cfg.split},result}
+
+# Hydra must not create its customary outputs/<date>/<time> directory before
+# CANMOT has validated every environment value and input path.
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false

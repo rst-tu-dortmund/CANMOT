@@ -1,0 +1,10 @@
+detectors:
+  centerpoint_validation:
+    filename: centerpoint_flip/infos_val_10sweeps_withvelo_filter_True.json
+    sha256: 4186f748f91e071c1276287244e23a01da5908a373af85ee2dfb08ea935b903e
+    url: https://mitprod-my.sharepoint.com/:f:/g/personal/tianweiy_mit_edu/Eip_tOTYSk5JhdVtVzlXlyABDPnGx9vsnwdo5SRK7bsh8w?e=vSdija
+  centerpoint_train:
+    filename: centerpoint_flip/infos_train_10sweeps_withvelo_filter_True.json
+    sha256: 547fdb7dd6c401749f619a504fa37ee70dbad676d3f400b28c5176bff3327145
+    url: https://mitprod-my.sharepoint.com/:f:/g/personal/tianweiy_mit_edu/Eip_tOTYSk5JhdVtVzlXlyABDPnGx9vsnwdo5SRK7bsh8w?e=vSdija
+source_issue: https://github.com/tianweiy/CenterPoint/issues/249

@@ -1,0 +1,14 @@
+# @package _global_
+defaults:
+  - override /detector_cfg: centerpoint
+  - override /model_cfg/matrix_q: centerpoint/local/val/shared_opt
+  - override /model_cfg/matrix_r: centerpoint/local/val/shared_opt
+  - override /poly_mot: nusc_config_rotate_cov_cv
+  - _self_
+
+experiment_id: paper/local/shared
+eval_only: False
+dataset_cfg:
+  split: val
+eval_path: ${path_join:${environment_cfg.logging_base_path},paper,local,shared,eval}
+result_path: ${path_join:${environment_cfg.logging_base_path},paper,local,shared,result}

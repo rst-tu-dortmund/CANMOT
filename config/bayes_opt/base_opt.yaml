@@ -1,0 +1,25 @@
+defaults:
+  - params: base_params
+
+pbounds:
+  log_translational_sigma:
+    - ${math:log,1e-4}
+    - ${math:log,3}
+  log_v_translational_sigma:
+    - ${math:log,1e-4}
+    - ${math:log,3}
+  log_rotational_sigma:
+    - ${math:log,1e-4}
+    - ${math:log,3}
+  log_dimension_sigma:
+    - ${math:log,1e-4}
+    - ${math:log,3}
+classes:
+  q: [bicycle, bus, car, motorcycle, pedestrian, trailer, truck]
+  r: [bicycle, bus, car, motorcycle, pedestrian, trailer, truck]
+
+param_order:
+  cv:
+    q: [x, y, z, w, l, h, vx, vy, vz, angz]
+    r: [x, y, z, w, l, h, vx, vy, angz]
+limit_classes: null

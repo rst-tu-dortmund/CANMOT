@@ -1,0 +1,9 @@
+x: log_translational_sigma
+y: log_translational_sigma
+z: log_translational_sigma
+vx: log_v_translational_sigma
+vy: log_v_translational_sigma
+angz: log_rotational_sigma
+w: log_dimension_sigma
+l: log_dimension_sigma
+h: log_dimension_sigma

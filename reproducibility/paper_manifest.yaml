@@ -1,0 +1,79 @@
+schema_version: 1
+paper: CANMOT
+nuscenes_devkit_revision: 656cf5636f5afbe0a1eaa425b3d2dde664b171c5
+motmetrics_revision: 34b060ed3526811921f334cab8df96e8ac4139ec
+motmetrics_package_tree: ea70e03d58a1c0c3f8d5f005f6fa65b8ce4709ef
+inputs:
+  centerpoint_validation:
+    filename: centerpoint_flip/infos_val_10sweeps_withvelo_filter_True.json
+    sha256: 4186f748f91e071c1276287244e23a01da5908a373af85ee2dfb08ea935b903e
+  centerpoint_train:
+    filename: centerpoint_flip/infos_train_10sweeps_withvelo_filter_True.json
+    sha256: 547fdb7dd6c401749f619a504fa37ee70dbad676d3f400b28c5176bff3327145
+figures:
+  figure_1: generated from the frozen local/global trainval sample covariances
+  figure_2: generated from scene 144 by the four configurations documented in the README
+covariance_policy:
+  empirical: Full sample-covariance matrices, including off-diagonal entries.
+  optimized: Diagonal matrices used by the optimized paper configurations.
+reference_policy: Each reference JSON named below is normative and contains the complete unrounded Table I and Table II metrics, including per-class ANEES, violation percentages, and chi-square conclusions.
+optimization_provenance:
+  frozen_best_parameters: Stored in the model_cfg files selected by the optimized experiment YAMLs.
+  protocol: Diagonal entries in [1e-4, 3], ten evaluations per parameter; class-aware recipes optimize per-class AMOTA.
+experiments:
+  paper/local/canmot/sc:
+    table_row: CANMOT-SC
+    reference: reference/local_canmot_sc.json
+    expected: {amota: 0.7350065802420644, amotp: 0.5123582282850655, ids: 190, frag: 285, tp: 83876, fp: 12251}
+    paper: {amota: '0.735', amotp: '0.512', ids: 190, frag: 285}
+  paper/local/canmot/opt:
+    table_row: CANMOT-Opt
+    reference: reference/local_canmot_opt.json
+    expected: {amota: 0.7375213192318218, amotp: 0.522187365341266, ids: 208, frag: 285, tp: 84340, fp: 12957}
+    paper: {amota: '0.738', amotp: '0.522', ids: 208, frag: 285}
+  paper/local/shared:
+    table_row: Local Shared-Opt
+    reference: reference/local_shared.json
+    expected: {amota: 0.7330088428243285, amotp: 0.5224601377341641, ids: 226, frag: 316, tp: 84550, fp: 13413}
+    paper: {amota: '0.733', amotp: '0.522', ids: 226, frag: 316}
+  paper/local/sample/train:
+    table_row: Local SC-T
+    reference: reference/local_sample_train.json
+    expected: {amota: 0.7200202386371256, amotp: 0.5577387108017285, ids: 246, frag: 273, tp: 84547, fp: 13563}
+    paper: {amota: '0.720', amotp: '0.558', ids: 246, frag: 273}
+  paper/local/sample/val:
+    table_row: Local SC-V
+    reference: reference/local_sample_val.json
+    expected: {amota: 0.7197422499874643, amotp: 0.5536041037089167, ids: 221, frag: 269, tp: 83857, fp: 12959}
+    paper: {amota: '0.720', amotp: '0.554', ids: 221, frag: 269}
+  paper/local/sample/trainval:
+    table_row: Local SC-TV
+    reference: reference/local_sample_trainval.json
+    expected: {amota: 0.7194903672725622, amotp: 0.557842418442921, ids: 240, frag: 271, tp: 84372, fp: 13381}
+    paper: {amota: '0.719', amotp: '0.558', ids: 240, frag: 271}
+  paper/global/sample/train:
+    table_row: Global SC-T
+    reference: reference/global_sample_train.json
+    expected: {amota: 0.7213460917999898, amotp: 0.5466264461366954, ids: 252, frag: 263, tp: 83971, fp: 13030}
+    paper: {amota: '0.721', amotp: '0.547', ids: 252, frag: 263}
+  paper/global/sample/val:
+    table_row: Global SC-V
+    reference: reference/global_sample_val.json
+    expected: {amota: 0.7163666036632836, amotp: 0.5516630733416148, ids: 271, frag: 264, tp: 84307, fp: 13533}
+    paper: {amota: '0.716', amotp: '0.552', ids: 271, frag: 264}
+  paper/global/sample/trainval:
+    table_row: Global SC-TV
+    reference: reference/global_sample_trainval.json
+    expected: {amota: 0.7211468970326808, amotp: 0.5476485798856784, ids: 248, frag: 249, tp: 83808, fp: 12840}
+    paper: {amota: '0.721', amotp: '0.548', ids: 248, frag: 249}
+  paper/global/shared:
+    table_row: Global Shared-Opt
+    reference: reference/global_shared.json
+    expected: {amota: 0.7301960576115044, amotp: 0.5087359388689049, ids: 204, frag: 289, tp: 83474, fp: 12442}
+    paper: {amota: '0.730', amotp: '0.509', ids: 204, frag: 289}
+  paper/baseline/poly_mot:
+    table_row: Poly-MOT
+    reference: reference/poly_mot.json
+    expected: {amota: 0.7284656571534474, amotp: 0.5167405821553189, ids: 235, frag: 295, tp: 84094, fp: 13062}
+    paper: {amota: '0.728', amotp: '0.517', ids: 235, frag: 295}
+    known_condition: The baseline loses positive-semidefiniteness; this published behavior is reported, not corrected.

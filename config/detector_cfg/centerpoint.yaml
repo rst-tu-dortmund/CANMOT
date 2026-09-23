@@ -1,0 +1,6 @@
+# raw_detections_path: ${environment_cfg.detector_base_path}/centerpoint_flip/infos_val_10sweeps_withvelo_filter_True.json
+ordered_detections_path:
+  train: ${path_join:${environment_cfg.detector_base_path},centerpoint_flip/infos_train_10sweeps_withvelo_filter_True.json}
+  val: ${path_join:${environment_cfg.detector_base_path},centerpoint_flip/infos_val_10sweeps_withvelo_filter_True.json}
+model_name: centerpointflip
+SF_thre: {0: 0.14, 3: 0.16, 1: 0, 2: 0.16, 5: 0.1, 6: 0, 4: 0.16}

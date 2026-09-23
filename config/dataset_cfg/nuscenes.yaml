@@ -1,0 +1,5 @@
+name: nuscenes
+set: trainval
+split: val
+dataset_path: ${environment_cfg.dataset_base_path}/nuscenes
+first_token_path: data/utils/first_token_table/${.set}/nusc_first_token.json

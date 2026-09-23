@@ -1,0 +1,4 @@
+SF_thre: {0: 0.14, 3: 0.16, 1: 0, 2: 0.16, 5: 0.1, 6: 0, 4: 0.16}
+NMS_thre: 0.08
+NMS_type: blend_nms  # blend_nms, no_blend_nms, blend_soft_nms
+NMS_metric: iou_bev  # iou_bev, iou_3d, giou_bev, giou_3d

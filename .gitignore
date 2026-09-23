@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.hydra/
+outputs/
+result/
+eval/
+final_outputs/
+config/environment_cfg/*
+!config/environment_cfg/base_environment.yaml
+data/detectors/
+*.log

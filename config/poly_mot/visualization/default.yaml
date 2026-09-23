@@ -1,0 +1,4 @@
+enable: False
+sequence_ids: null  # null for all; paper Figure 2 uses [144]
+every_n_steps: 35
+output_subdir: ${path_join:${environment_cfg.logging_base_path},tracking_visualizations}

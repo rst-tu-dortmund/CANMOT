@@ -1,0 +1,17 @@
+# @package _global_
+defaults:
+  - override /detector_cfg: centerpoint
+  - override /model_cfg/matrix_q: null
+  - override /model_cfg/matrix_r: null
+  - override /poly_mot: nusc_config_poly_mot
+  - _self_
+
+experiment_id: paper/baseline/poly_mot
+eval_only: False
+dataset_cfg:
+  split: val
+model_cfg:
+  matrix_q:
+  matrix_r:
+eval_path: ${path_join:${environment_cfg.logging_base_path},paper,baseline,poly_mot,eval}
+result_path: ${path_join:${environment_cfg.logging_base_path},paper,baseline,poly_mot,result}

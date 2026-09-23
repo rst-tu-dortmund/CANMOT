@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the CANMOT paper.
+title: CANMOT paper-reproduction code
+type: software
+authors:
+  - family-names: Osterburg
+    given-names: Timo
+  - family-names: Schütte
+    given-names: Stefan
+  - family-names: Bertram
+    given-names: Torsten
+year: 2026
+license: BSD-3-Clause
+repository-code: https://github.com/rst-tu-dortmund/CANMOT
+preferred-citation:
+  type: conference-paper
+  title: "CANMOT: Class-Aware Noise Modeling for Multi-Object Tracking in Autonomous Driving"
+  authors:
+    - family-names: Osterburg
+      given-names: Timo
+    - family-names: Schütte
+      given-names: Stefan
+    - family-names: Bertram
+      given-names: Torsten
+  year: 2026
+  collection-title: 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
