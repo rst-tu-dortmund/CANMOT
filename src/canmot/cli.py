@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import json
 import os
 import shutil
 import subprocess
@@ -36,7 +35,7 @@ def _compose(environment: str, experiment: str | None = None):
 
 
 def _run(experiment: str, environment: str, extra: list[str] | None = None) -> None:
-    command = [sys.executable, str(ROOT / "test.py"), f"environment_cfg={environment}", f"+experiment={experiment}"]
+    command = [sys.executable, str(ROOT / "run.py"), f"environment_cfg={environment}", f"+experiment={experiment}"]
     command.extend(extra or [])
     subprocess.run(command, cwd=ROOT, check=True)
 

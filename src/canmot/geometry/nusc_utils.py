@@ -2,13 +2,11 @@
 utils for geometry calculations on the NuScenes dataset
 """
 
-import pdb
-import numba as nb
 import numpy as np
 from .nusc_box import NuscBox
 from scipy.spatial import ConvexHull
 from shapely.geometry import Polygon
-from typing import List, Tuple, Union
+from typing import List, Union
 from canmot.data.script.NUSC_CONSTANT import *
 
 

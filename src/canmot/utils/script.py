@@ -2,7 +2,6 @@
 matching script
 """
 
-import pdb
 import numpy as np
 from canmot.data.script.NUSC_CONSTANT import *
 from canmot.geometry.nusc_utils import mask_between_boxes

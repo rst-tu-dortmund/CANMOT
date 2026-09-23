@@ -2,7 +2,6 @@
 3d Box Class inherit from nuscenes.utils.data_classes.box
 """
 
-import pdb
 
 import numpy as np
 from typing import List, Tuple

@@ -1,6 +1,6 @@
 # Third-party notices
 
-CANMOT retains parts of [Poly-MOT](https://github.com/eddyhkchiu/Poly-MOT),
+CANMOT retains parts of [Poly-MOT](https://github.com/lixiaoyu2000/Poly-MOT),
 which are distributed under the MIT License. Its copyright and license text are
 preserved in [`third_party/poly_mot/LICENSE`](third_party/poly_mot/LICENSE).
 

@@ -16,7 +16,7 @@ from omegaconf import DictConfig, OmegaConf
 from canmot.config_resolvers import register_resolvers
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from test import run  # noqa: E402
+from run import run  # noqa: E402
 
 register_resolvers()
 

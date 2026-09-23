@@ -12,6 +12,7 @@ authors:
 year: 2026
 license: BSD-3-Clause
 repository-code: https://github.com/rst-tu-dortmund/CANMOT
+url: https://arxiv.org/pdf/2606.03590
 preferred-citation:
   type: conference-paper
   title: "CANMOT: Class-Aware Noise Modeling for Multi-Object Tracking in Autonomous Driving"
@@ -23,4 +24,5 @@ preferred-citation:
     - family-names: Bertram
       given-names: Torsten
   year: 2026
+  url: https://arxiv.org/pdf/2606.03590
   collection-title: 2026 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)

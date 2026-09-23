@@ -3,7 +3,6 @@ assign tracklet confidence score
 predict, update, punish tracklet score under category-specific way.
 """
 
-import pdb
 from canmot.motion_module.nusc_object import FrameObject
 
 

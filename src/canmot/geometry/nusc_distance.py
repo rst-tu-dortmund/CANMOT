@@ -9,19 +9,13 @@ Code URL: SimpleTrack(https://github.com/tusen-ai/SimpleTrack) AB3DMOT(https://g
 EagerMOT(https://github.com/aleksandrkim61/EagerMOT)
 """
 
-import copy
-import pdb
 import numpy as np
-import einops
 from typing import Tuple
 from shapely.geometry import Polygon
 from scipy.spatial import ConvexHull
-from scipy.spatial.distance import cdist
 from canmot.utils import expand_dims
-from canmot.pre_processing.nusc_data_conversion import concat_box_attr
 from canmot.geometry import (
     PolyArea2D_s,
-    yaw_punish_factor,
     mask_between_boxes,
     logical_or_mask,
     loop_convex,

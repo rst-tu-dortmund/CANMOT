@@ -8,7 +8,6 @@ import hydra
 
 sys.path.append("../..")
 from canmot.utils.io import load_file
-from tqdm import tqdm
 from nuscenes.nuscenes import NuScenes
 
 from canmot.config_resolvers import register_resolvers

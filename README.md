@@ -1,5 +1,8 @@
 # CANMOT
 
+**CANMOT: Class-Aware Noise Modeling for Multi-Object Tracking in Autonomous Driving**  
+Timo Osterburg, Stefan Schütte, Torsten Bertram — IROS 2026 · [Paper (arXiv)](https://arxiv.org/pdf/2606.03590)
+
 This repository is the official implementation and reproduction release for **CANMOT**. It
 keeps the recognizable Poly-MOT tracker architecture while adding the
 covariance-aware filters, frozen paper configurations, calibration evaluation,
@@ -17,7 +20,7 @@ tracker—the principal experimental change.
 Use Python 3.10 and clone submodules:
 
 ```bash
-git clone --recurse-submodules <CANMOT-URL> canmot
+git clone --recurse-submodules https://github.com/rst-tu-dortmund/CANMOT.git canmot
 cd canmot
 python3.10 -m venv .venv
 source .venv/bin/activate
@@ -36,7 +39,7 @@ cp config/environment_cfg/base_environment.yaml config/environment_cfg/my_machin
 All five values are mandatory. `dataset_base_path/nuscenes` must contain
 nuScenes; `detector_base_path/centerpoint_flip` must contain the detector JSONs;
 `logging_base_path` and `cache_path` must be writable; `n_processes` is `0` for
-a single process or a positive worker count. Run:
+a single process or a positive worker count.
 
 ```text
 <dataset_base_path>/nuscenes/
@@ -54,7 +57,7 @@ Then run:
 
 ```bash
 canmot preflight --environment my_machine
-python test.py environment_cfg=my_machine +experiment=paper/local/canmot/sc
+python run.py environment_cfg=my_machine +experiment=paper/local/canmot/sc
 canmot verify /path/from/logging_base_path/paper/local/canmot/sc
 ```
 
@@ -161,6 +164,19 @@ The smoke fixture is synthetic and needs neither nuScenes nor detector files.
 For errors, first check the ignored environment YAML, detector checksums, the
 pinned submodule revision, available disk space, and that the command is run
 from the repository root.
+
+## Acknowledgements
+
+CANMOT builds directly on [Poly-MOT](https://github.com/lixiaoyu2000/Poly-MOT)
+by Xiaoyu Li et al.; its tracker architecture, association, and lifecycle
+management are retained here. We thank its authors for releasing their code.
+We also build on [py-motmetrics](https://github.com/cheind/py-motmetrics), the
+[nuScenes devkit](https://github.com/nutonomy/nuscenes-devkit), and
+[CenterPoint](https://github.com/tianweiy/CenterPoint) detections, and parts
+of the geometry code are inspired by
+[SimpleTrack](https://github.com/tusen-ai/SimpleTrack),
+[AB3DMOT](https://github.com/xinshuoweng/AB3DMOT), and
+[EagerMOT](https://github.com/aleksandrkim61/EagerMOT).
 
 ## Citation and licenses
 

@@ -5,9 +5,7 @@ Constant Turn Rate and Acceleration (CTRA).
 """
 
 import abc
-import pdb
 import numpy as np
-from typing import Tuple
 from pyquaternion import Quaternion
 class ABC_MODEL(abc.ABC):
     """interface of all motion models"""
@@ -399,9 +397,8 @@ class CV(ABC_MODEL):
         """
         if self.matrix_r is None:
             return np.asarray(np.eye(self.SD)) * 0.01
-        H = self.getMeaStateH(
-            np.zeros((self.SD, 1))
-        )  # FIXME: this should be the initial state
+        # H is state-independent for the linear CV model, so a placeholder state suffices
+        H = self.getMeaStateH(np.zeros((self.SD, 1)))
         P = H.T @ np.asarray(self.matrix_r[cls_label]) @ H
         P[8, 8] = 0.1  # set the vertical velocity variance to a small value
         return P

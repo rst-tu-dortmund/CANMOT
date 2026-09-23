@@ -5,7 +5,6 @@ Obtain the observation information(detection) of each frame iteratively
 """
 
 import logging
-import pdb
 import numpy as np
 from canmot.utils.io import load_file
 from canmot.data.script.NUSC_CONSTANT import *

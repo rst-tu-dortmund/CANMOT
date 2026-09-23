@@ -8,9 +8,7 @@ Specifically, we use the count-based strategy to initialize and unregister traje
 score-based strategy to penalize mismatched trajectories
 """
 
-import pdb
 import logging
-import numpy as np
 from .nusc_life_manage import LifeManagement
 from .nusc_score_manage import ScoreManagement
 from canmot.motion_module.nusc_object import FrameObject

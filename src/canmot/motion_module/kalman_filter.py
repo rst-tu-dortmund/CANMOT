@@ -6,7 +6,6 @@ Linear Kalman Filter for CA and CV; extended Kalman filter for CTRA
 Ref: https://en.wikipedia.org/wiki/Kalman_filter
 """
 
-import pdb
 import logging
 import numpy as np
 from .nusc_object import FrameObject

@@ -3,7 +3,6 @@ Tracker, Core of Poly-MOT.
 Tracklet prediction and punishment, cost matrix construction, tracking id assignment, tracklet update and init, and output file
 """
 
-import pdb
 import logging
 import os
 import numpy as np

@@ -3,12 +3,9 @@ Non-Maximum Suppression(NMS) ops for the NuScenes dataset
 Blend NMS used by the CANMOT paper experiments.
 """
 
-import pdb
 
 import numpy as np
-import numba as nb
 from typing import List
-from canmot.geometry import NuscBox
 from canmot.data.script.NUSC_CONSTANT import *
 from canmot.geometry.nusc_distance import (
     iou_bev_s,

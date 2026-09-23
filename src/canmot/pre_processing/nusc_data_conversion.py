@@ -2,7 +2,6 @@
 data format conversion and data concat on the NuScenes dataset
 """
 
-import pdb
 import numpy as np
 from typing import Tuple, List
 from canmot.geometry import NuscBox
