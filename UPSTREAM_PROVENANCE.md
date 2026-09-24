@@ -2,7 +2,7 @@
 
 - Adapted nuScenes devkit:
   [`rst-tu-dortmund/nuscenes-devkit`](https://github.com/rst-tu-dortmund/nuscenes-devkit)
-  at `4e2adaf4a94ac6aae2be31efce28511e945fd754`.
+  at `e4818ff92714d28aefa3ffe0e07dacbd7f64e840`.
 - Poly-MOT: retained tracker architecture, lifecycle, association, and baseline
   motion models; see the original project and license.
 - motmetrics: derived from the public
