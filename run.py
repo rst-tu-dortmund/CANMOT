@@ -191,7 +191,7 @@ def run(config: DictConfig | dict[str, Any]) -> dict[str, Any]:
     metadata = {
         "created_at": datetime.now(timezone.utc).isoformat(),
         "repository_revision": _git_revision(Path(__file__).resolve().parent),
-        "nuscenes_devkit_revision": "4e2adaf4a94ac6aae2be31efce28511e945fd754",
+        "nuscenes_devkit_revision": "e4818ff92714d28aefa3ffe0e07dacbd7f64e840",
         "detection_path": str(detection_path),
         "detection_sha256": _sha256(detection_path),
         "python": platform.python_version(),

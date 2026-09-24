@@ -1,6 +1,6 @@
 schema_version: 1
 paper: CANMOT
-nuscenes_devkit_revision: 4e2adaf4a94ac6aae2be31efce28511e945fd754
+nuscenes_devkit_revision: e4818ff92714d28aefa3ffe0e07dacbd7f64e840
 motmetrics_revision: 34b060ed3526811921f334cab8df96e8ac4139ec
 motmetrics_package_tree: ea70e03d58a1c0c3f8d5f005f6fa65b8ce4709ef
 inputs:
