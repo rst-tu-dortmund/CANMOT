@@ -1,5 +1,7 @@
 from pathlib import Path
+import subprocess
 
+import pytest
 from hydra import compose, initialize_config_dir
 from omegaconf import OmegaConf
 import yaml
@@ -28,8 +30,17 @@ def test_all_paper_configs_compose():
 
 
 def test_only_environment_template_is_versionable():
-    folder = Path(__file__).resolve().parents[1] / "config" / "environment_cfg"
-    assert [path.name for path in folder.glob("*.yaml")] == ["base_environment.yaml"]
+    root = Path(__file__).resolve().parents[1]
+    if not (root / ".git").exists():
+        pytest.skip("not a git checkout")
+    folder = "config/environment_cfg"
+    tracked = subprocess.run(
+        ["git", "ls-files", folder], cwd=root, check=True, capture_output=True, text=True,
+    ).stdout.split()
+    assert tracked == [f"{folder}/base_environment.yaml"]
+    # Local machine configs must be ignored, whether or not one exists yet.
+    ignored = subprocess.run(["git", "check-ignore", "-q", f"{folder}/my_machine.yaml"], cwd=root)
+    assert ignored.returncode == 0
 
 
 def test_hydra_does_not_create_prevalidation_output_directories():
